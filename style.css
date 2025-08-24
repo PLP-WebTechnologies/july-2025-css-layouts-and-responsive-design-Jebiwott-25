@@ -1,0 +1,101 @@
+/* Reset the basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ocean vibes font + background */
+body {
+  font-family: Arial, sans-serif;
+  background: #e0f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Big ocean header */
+header {
+  background: #0288d1;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Navigation bar = flexbox magic */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background: #03a9f4;
+  padding: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Grid for main sections (content + sidebar) */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Main article area */
+.content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Sidebar = fun extras */
+.sidebar {
+  background: #b3e5fc;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Cards use flex to line up neatly */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: white;
+  flex: 1;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer = short & sweet */
+footer {
+  background: #0288d1;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/*  Responsive vibes: stack on smaller screens */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
